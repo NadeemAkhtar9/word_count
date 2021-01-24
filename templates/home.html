@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django</title>
+ 
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: bisque;
+        }
+        a{
+            text-decoration: none;
+            color: brown;
+             
+        }
+        a:hover{
+           font-size: larger;
+           color:hotpink;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>templates</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic praesentium numquam, reiciendis labore repellat ratione sit quae, inventore omnis vero rem nesciunt? Non, ab aliquam vitae molestiae rerum cupiditate distinctio minima facere sequi pariatur, sint esse doloribus, eius quam ullam placeat voluptatem praesentium eligendi reiciendis natus officiis. Sit, quasi!</p>
+    <a href="./about.html"> about page</a>
+    <br><br>
+    {{ hithere}} -->
+    <div class="center">
+
+        <a href="{% url 'about' %}">ABOUT US</a>
+        <h1>WORD COUNT</h1> 
+    
+        <form action="{% url 'count'  %}">
+            <textarea name="fulltext" id="" cols="40" rows="10"></textarea><br><br>
+            <input type="submit" value="COUNT!"> </input>
+        </form>
+    </div>
+
+</body>
+</html>
